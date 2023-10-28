@@ -1,0 +1,13 @@
+Semi-Honest or Passive adversary in system. Wont go against protocol, but are observing all the data sent. We dont want the hospital or other participants to learn our data.
+
+Dolev-Yao adversary on the network
+
+We will be using secure agregation -> you dont train the ML model on each individual data point, but rather the sum of all patients data points. The challenge for this exercise is to do this without revealing the underlying data points
+
+Use secure multiparty computation -> use the idea of secret sharing, splitting input into shares. Everyone sends a share to each other parts, and each patient can then add the total shares together, then each patient sends the sum of the shares theyve recieved to the hospital, which sums all of those shares. This deals with the Semi-Honest adversary. Use TLS(Find a library that does this kekw) to protect against Dolev-Yao.
+
+To implement shares: you work in a range [0-R]. field? Take an integer % prime, using addition? im confused LOL
+
+It is fine to just self sign the certificates
+
+Final Stage: Profit :)

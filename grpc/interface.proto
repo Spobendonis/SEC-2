@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ping;
+option go_package = "https://github.com/Spobendonis;Hospital";
+
+
+service Critical {
+    rpc sendShare (Share) returns (Empty) {}
+    rpc sendSummedShares (Share) returns (Empty) {}
+}
+
+message Share {
+    int32 value = 1;
+}
+
+message Empty {
+
+}
