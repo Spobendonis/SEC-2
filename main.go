@@ -34,7 +34,6 @@ var (
 	recievedShares = 0
 )
 
-// TODO: unspaghettify this code -> do something smart and readable for the hospital
 func main() {
 	flag.Parse()
 	//If the isHospital flag is true, this value will not be overwritten, making the port = hospitalId
